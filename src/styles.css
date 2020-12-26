@@ -1,1 +1,175 @@
-/* You can add global styles to this file, and also import other style files */
+.app-content {
+  min-height: calc(100vh - 50px);
+  margin-top: 50px;
+  padding: 30px;
+  margin-left: 230px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .app-content {
+    margin-left: 0;
+  }
+}
+
+.app-icon-image {
+  height: 50px;
+  width: 50px;
+}
+
+.app-tile {
+
+}
+
+.app-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #00A0FF;
+  z-index: 1050;
+  padding-right: 15px;
+}
+
+.app-header__logo {
+  flex: 1 0 auto;
+  color: #fff;
+  font-family: "Times";
+  text-align: center;
+  font-size: 26px;
+  padding: 0 15px;
+  line-height: 50px;
+}
+
+@media (min-width: 768px) {
+  .app-header__logo {
+    flex: 0 0 auto;
+    display: block;
+    width: 230px;
+  }
+}
+
+.app-search {
+  position: relative;
+  display: flex;
+  align-self: center;
+  margin-right: 15px;
+}
+
+@media (max-width: 480px) {
+  .app-search {
+    display: none;
+  }
+}
+
+.app-search__input {
+  border: 0;
+  padding: 5px 10px;
+  padding-right: 30px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.app-search__button {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  padding: 0 10px;
+  border: 0;
+  color: rgba(0, 0, 0, 0.8);
+  background: none;
+  cursor: pointer;
+}
+
+.app-nav {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .app-nav {
+    flex: 1 0 auto;
+  }
+}
+
+.app-nav__item {
+  display: block;
+  padding: 18px;
+  line-height: 20px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.app-nav__item:hover, .app-nav__item:focus {
+  background: rgba(0, 0, 0, 0.1);
+  color: #f6f6f6;
+}
+
+.app-sidebar__toggle {
+  padding: 0 15px;
+  color: #fff;
+  line-height: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.app-sidebar__toggle:focus, .app-sidebar__toggle:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .app-sidebar__toggle {
+    order: -1;
+  }
+}
+
+.app-sidebar__toggle > span {
+  display: inline-block;
+  padding: 15px;
+}
+
+.app-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: 70px;
+  width: 230px;
+  overflow: auto;
+  z-index: 10;
+  background-color: #2a4f69;
+  box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .app-sidebar {
+    left: -230px;
+  }
+}
+
+.app-menu {
+  margin-bottom: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.app-menu__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-left: 2px solid transparent;
+}
+
+.app.sidebar-toggled .app-sidebar {
+  left: 0px;
+}
+
